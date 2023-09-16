@@ -12,12 +12,6 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
 
 --------------------------------
 
-*Opción:* 🥵 | MODO HORNY
-*Comando:* ${usedPrefix + command} modohorny
-*Descripción:* Activa o desactiva los comandos +18 en el grupo.
-
---------------------------------
-
 *Opción:* 🔗 | ANTILINK
 *Comando:* ${usedPrefix + command} antilink
 *Descripción:* Activa o desactiva el anti-enlaces de WhatsApp.
@@ -108,34 +102,6 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
 *Comando:* ${usedPrefix + command} antitoxic
 *Descripción:* Detecta la malas palabras y advierte al participante del grupo, antes de ser eliminado.
 *Nota:* Se necesita tener activo el restrict.
-
---------------------------------
-
-*Opción:* 🕸️ | ANTITRABAS
-*Comando:* ${usedPrefix + command} antitraba
-*Descripción:* El Bot detecta textos largos que podrian ser virus y causar lag en el chat y elimina al usuario.
-*Nota:* Se necesita tener activo el restrict.
-
---------------------------------
-
-*Opción:* 👎 | ANTIARABES
-*Comando:* ${usedPrefix + command} antiarabes
-*Descripción:* Si un numero árabe se uné al grupo, el Bot lo elimina automaticamente.
-*Nota:* Se necesita tener activo el welcome y el restrict.
-
---------------------------------
-
-*Opción:* 👎 | ANTIARABES 2
-*Comando:* ${usedPrefix + command} antiarabes2
-*Descripción:* Si un numero árabe escribe en el grupo, el Bot lo elimina automaticamente.
-*Nota:* Se necesita tener activo el restrict.
-
---------------------------------
-
-*Opción:* 🤖 | MODEJADIBOT
-*Comando:* ${usedPrefix + command} modejadibot
-*Descripción:* Activa o desactiva el uso del comando para sub bots (${usedPrefix}serbot / ${usedPrefix}jadibot). 
-*Nota:* Este comando solo podrá ser usado por owners del Bot.
 
 --------------------------------
 
