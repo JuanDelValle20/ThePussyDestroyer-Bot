@@ -21,15 +21,12 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
     const document = doc[Math.floor(Math.random() * doc.length)];
     const str = `╭═══〘 ✯✯✯✯✯✯✯✯✯ 〙══╮
-║    ◉— *𝐓𝐡𝐞 𝐌𝐲𝐬𝐭𝐢𝐜 - 𝐁𝐨𝐭* —◉
+║    ◉— *ThePussyDestroyer - Bot* —◉
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡║
 ║➤ *𝗛ola, ${taguser}*
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡║
-║➤ *Owner:* Bruno Sobrino
-║➤ *Numero:* wa.me/5219992095479
-║➤ *Bot ofc:* wa.me/5219991402134
-║➤ *Bot ofc 2:* wa.me/5219993404349
-║➤ *PayPal:* https://www.paypal.me/TheShadowBrokers133
+║➤ *Owner:* J.C.
+║➤ *Numero:* wa.me/50241033780
 ║➤ *Fecha:* ${date}
 ║➤ *Tiempo activo:* ${uptime}
 ║➤ *Usuarios:* ${rtotalreg}
@@ -47,11 +44,6 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ┣ *🎟️ Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''}
 ┗━━━━━━━━━━━━━━━━┛
 ${readMore}
-┏━━━━━━━━━━━━━━━━┓
-┃ *< 𝔹𝕆𝕋 𝕆𝔽ℂ 𝕆 𝕊𝕌𝔹 𝔹𝕆𝕋 />*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡┃
-┣ ${(conn.user.jid == global.conn.user.jid ? '' : `Jadibot de: https://wa.me/${global.conn.user.jid.split`@`[0]}`) || '*Este es el Bot oficial*'}
-┗━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━┓
 ┃ *< 𝕊𝕆𝕃𝕌ℂ𝕀𝕆ℕ 𝔸 𝔼ℝℝ𝕆ℝ𝔼𝕊 />*
@@ -70,26 +62,11 @@ ${readMore}
 ┣ ඬ⃟ 💟 _${usedPrefix}estado_
 ┣ ඬ⃟ 💟 _${usedPrefix}infobot_
 ┣ ඬ⃟ 💟 _${usedPrefix}speedtest_
-┣ ඬ⃟ 💟 _${usedPrefix}donar_
 ┣ ඬ⃟ 💟 _${usedPrefix}owner_
 ┣ ඬ⃟ 💟 _${usedPrefix}script_
 ┣ ඬ⃟ 💟 _Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
 ┗━━━━━━━━━━━━━━━━┛
 
-┏━━━━━━━━━━━━━━━━┓
-┃ *< 𝕌ℕ𝔼 𝕌ℕ 𝔹𝕆𝕋 𝔸 𝕋𝕌 𝔾ℝ𝕌ℙ𝕆 />*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡┃
-┣ ඬ⃟ 👽 _${usedPrefix}join *<enlace / link / url>*_
-┗━━━━━━━━━━━━━━━━┛
-
-┏━━━━━━━━━━━━━━━━┓
-┃ *< 𝕊𝔼ℝ𝔹𝕆𝕋 - 𝕁𝔸𝔻𝕀𝔹𝕆𝕋 />*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡┃
-┣ ඬ⃟ 🤖 _${usedPrefix}serbot --code_
-┣ ඬ⃟ 🤖 _${usedPrefix}serbot_
-┣ ඬ⃟ 🤖 _${usedPrefix}stop_
-┣ ඬ⃟ 🤖 _${usedPrefix}bots_
-┗━━━━━━━━━━━━━━━━┛  
 
 ┏━━━━━━━━━━━━━━━━┓
 ┃ *< 𝕁𝕌𝔼𝔾𝕆𝕊 />*
@@ -97,14 +74,6 @@ ${readMore}
 ┣ ඬ⃟ 🎖️ _${usedPrefix}mates *<noob / easy / medium / hard / extreme /impossible /impossible2>*_
 ┣ ඬ⃟ 🎖️ _${usedPrefix}fake *<texto1> <@tag> <texto2>*_
 ┣ ඬ⃟ 🎖️ _${usedPrefix}ppt *<papel / tijera /piedra>*_
-┣ ඬ⃟ 🎖️ _${usedPrefix}prostituto *<nombre / @tag>*_
-┣ ඬ⃟ 🎖️ _${usedPrefix}prostituta *<nombre / @tag>*_
-┣ ඬ⃟ 🎖️ _${usedPrefix}gay2 *<nombre / @tag>*_
-┣ ඬ⃟ 🎖️ _${usedPrefix}lesbiana *<nombre / @tag>*_
-┣ ඬ⃟ 🎖️ _${usedPrefix}pajero *<nombre / @tag>*_
-┣ ඬ⃟ 🎖️ _${usedPrefix}pajera *<nombre / @tag>*_
-┣ ඬ⃟ 🎖️ _${usedPrefix}puto *<nombre / @tag>*_
-┣ ඬ⃟ 🎖️ _${usedPrefix}puta *<nombre / @tag>*_
 ┣ ඬ⃟ 🎖️ _${usedPrefix}manco *<nombre / @tag>*_
 ┣ ඬ⃟ 🎖️ _${usedPrefix}manca *<nombre / @tag>*_
 ┣ ඬ⃟ 🎖️ _${usedPrefix}rata *<nombre / @tag>*_
@@ -118,8 +87,6 @@ ${readMore}
 ┣ ඬ⃟ 🎖️ _${usedPrefix}acertijo_
 ┣ ඬ⃟ 🎖️ _${usedPrefix}simi *<texto>*_
 ┣ ඬ⃟ 🎖️ _${usedPrefix}top *<texto>*_
-┣ ඬ⃟ 🎖️ _${usedPrefix}topgays_
-┣ ඬ⃟ 🎖️ _${usedPrefix}topotakus_
 ┣ ඬ⃟ 🎖️ _${usedPrefix}formarpareja_
 ┣ ඬ⃟ 🎖️ _${usedPrefix}verdad_
 ┣ ඬ⃟ 🎖️ _${usedPrefix}reto_
@@ -134,8 +101,6 @@ ${readMore}
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡┃
 ┣ ඬ⃟ ☑️ _${usedPrefix}enable *welcome*_
 ┣ ඬ⃟ ☑️ _${usedPrefix}disable *welcome*_
-┣ ඬ⃟ ☑️ _${usedPrefix}enable *modohorny*_
-┣ ඬ⃟ ☑️ _${usedPrefix}disable *modohorny*_
 ┣ ඬ⃟ ☑️ _${usedPrefix}enable *antilink*_
 ┣ ඬ⃟ ☑️ _${usedPrefix}disable *antilink*_
 ┣ ඬ⃟ ☑️ _${usedPrefix}enable *antilink2*_
@@ -150,10 +115,6 @@ ${readMore}
 ┣ ඬ⃟ ☑️ _${usedPrefix}disable *antiviewonce*_
 ┣ ඬ⃟ ☑️ _${usedPrefix}enable *antitoxic*_
 ┣ ඬ⃟ ☑️ _${usedPrefix}disable *antitoxic*_
-┣ ඬ⃟ ☑️ _${usedPrefix}enable *antitraba*_
-┣ ඬ⃟ ☑️ _${usedPrefix}disable *antitraba*_
-┣ ඬ⃟ ☑️ _${usedPrefix}enable *antiarabes*_
-┣ ඬ⃟ ☑️ _${usedPrefix}disable *antiarabes*_
 ┣ ඬ⃟ ☑️ _${usedPrefix}enable *modoadmin*_
 ┣ ඬ⃟ ☑️ _${usedPrefix}disable *modoadmin*_
 ┣ ඬ⃟ ☑️ _${usedPrefix}enable *antidelete*_
@@ -175,8 +136,6 @@ ${readMore}
 ┣ ඬ⃟ 📥 _${usedPrefix}gdrive *<enlace / link / url>*_
 ┣ ඬ⃟ 📥 _${usedPrefix}tiktok *<enlace / link / url>*_
 ┣ ඬ⃟ 📥 _${usedPrefix}tiktokimg *<enlace / link / url>*_
-┣ ඬ⃟ 📥 _${usedPrefix}xnxxdl *<enlace / link / url>*_
-┣ ඬ⃟ 📥 _${usedPrefix}xvideosdl *<enlace / link / url>*_
 ┣ ඬ⃟ 📥 _${usedPrefix}twitter *<enlace / link / url>*_
 ┣ ඬ⃟ 📥 _${usedPrefix}fb *<enlace / link / url>*_
 ┣ ඬ⃟ 📥 _${usedPrefix}ytshort *<enlace / link / url>*_
@@ -214,7 +173,6 @@ ${readMore}
 ┣ ඬ⃟ 🔍 _${usedPrefix}modapk *<texto>*_
 ┣ ඬ⃟ 🔍 _${usedPrefix}stickersearch *<texto>*_
 ┣ ඬ⃟ 🔍 _${usedPrefix}stickersearch2 *<texto>*_
-┣ ඬ⃟ 🔍 _${usedPrefix}xnxxsearch *<texto>*_
 ┣ ඬ⃟ 🔍 _${usedPrefix}animeinfo *<texto>*_
 ┣ ඬ⃟ 🔍 _${usedPrefix}google *<texto>*_
 ┣ ඬ⃟ 🔍 _${usedPrefix}letra *<texto>*_
@@ -297,12 +255,6 @@ ${readMore}
 ┗━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━┓
-┃ *< ℝ𝔸ℕ𝔻-𝔸ℕ𝕀𝕄𝔼𝕊 />*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡┃
-┣ ඬ⃟ 🧿 _${usedPrefix}menuanimes_
-┗━━━━━━━━━━━━━━━━┛
-
-┏━━━━━━━━━━━━━━━━┓
 ┃ *< ℝ𝔸ℕ𝔻𝕆𝕄 />*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡┃
 ┣ ඬ⃟ 👾 _${usedPrefix}kpop *<blackpink / exo / bts>*_
@@ -334,11 +286,6 @@ ${readMore}
 ┣ ඬ⃟ 👾 _${usedPrefix}randomprofile_
 ┗━━━━━━━━━━━━━━━━┛
 
-┏━━━━━━━━━━━━━━━━┓
-┃ *< ℂ𝕆𝕄𝔸ℕ𝔻𝕆𝕊 +𝟙𝟠 />*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡┃
-┣ ඬ⃟ 🔞 _${usedPrefix}labiblia_
-┗━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━┓
 ┃ *< 𝔼𝔽𝔼ℂ𝕋𝕆𝕊 𝔻𝔼 𝔸𝕌𝔻𝕀𝕆𝕊 />*
@@ -400,30 +347,6 @@ ${readMore}
 ┣ ඬ⃟ 🛠️ _${usedPrefix}covid *<pais>*_
 ┣ ඬ⃟ 🛠️ _${usedPrefix}horario_
 ┣ ඬ⃟ 🛠️ _${usedPrefix}dropmail_
-┗━━━━━━━━━━━━━━━━┛
-
-┏━━━━━━━━━━━━━━━━┓
-┃ *< ℝℙ𝔾 - 𝕃𝕀𝕄𝕀𝕋𝔼𝕊 - 𝔼ℂ𝕆ℕ𝕆𝕄𝕀𝔸 />*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡┃
-┣ ඬ⃟ 💵 _${usedPrefix}adventure_
-┣ ඬ⃟ 💵 _${usedPrefix}cazar_
-┣ ඬ⃟ 💵 _${usedPrefix}cofre_
-┣ ඬ⃟ 💵 _${usedPrefix}balance_
-┣ ඬ⃟ 💵 _${usedPrefix}claim_
-┣ ඬ⃟ 💵 _${usedPrefix}heal_
-┣ ඬ⃟ 💵 _${usedPrefix}lb_
-┣ ඬ⃟ 💵 _${usedPrefix}levelup_
-┣ ඬ⃟ 💵 _${usedPrefix}myns_
-┣ ඬ⃟ 💵 _${usedPrefix}perfil_
-┣ ඬ⃟ 💵 _${usedPrefix}work_
-┣ ඬ⃟ 💵 _${usedPrefix}minar_
-┣ ඬ⃟ 💵 _${usedPrefix}minar2_
-┣ ඬ⃟ 💵 _${usedPrefix}buy_
-┣ ඬ⃟ 💵 _${usedPrefix}buyall_
-┣ ඬ⃟ 💵 _${usedPrefix}verificar_
-┣ ඬ⃟ 💵 _${usedPrefix}robar *<cantidad> <@tag>*_
-┣ ඬ⃟ 💵 _${usedPrefix}transfer *<tipo> <cantidad> <@tag>*_
-┣ ඬ⃟ 💵 _${usedPrefix}unreg *<numero de serie>*_
 ┗━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━┓
