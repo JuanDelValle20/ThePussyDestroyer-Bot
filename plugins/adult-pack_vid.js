@@ -2,29 +2,29 @@ import fetch from 'node-fetch';
 const handler = async (m, {conn, command, usedPrefix}) => {
   if (!db.data.chats[m.chat].modohorny && m.isGroup) throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙻𝙾𝚂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 +𝟷𝟾 𝙴𝚂𝚃𝙰𝙽 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾𝚂 𝙴𝙽 𝙴𝚂𝚃𝙴 𝙶𝚁𝚄𝙿𝙾, 𝚂𝙸 𝙴𝚂 𝙰𝙳𝙼𝙸𝙽 𝚈 𝙳𝙴𝚂𝙴𝙰 𝙰𝙲𝚃𝙸𝚅𝙰𝚁𝙻𝙾𝚂 𝚄𝚂𝙴 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 #enable modohorny*';
   switch (command) {
-    case 'pack':
+    case 'pack777':
       const url = await pack[Math.floor(Math.random() * pack.length)];
       conn.sendMessage(m.chat, {image: {url: url}, caption: `_🥵 Pack 🥵_`}, {quoted: m});
       break;
-    case 'pack2':
+    case 'pack2777':
       const url2 = await packgirl[Math.floor(Math.random() * packgirl.length)];
       conn.sendMessage(m.chat, {image: {url: url2}, caption: `_🥵 Pack 🥵_`}, {quoted: m});
       break;
-    case 'pack3':
+    case 'pack3777':
       const url3 = await packmen[Math.floor(Math.random() * packmen.length)];
       conn.sendMessage(m.chat, {image: {url: url3}, caption: `_🥵 Pack 3 🥵_`}, {quoted: m});
       break;
-    case 'videoxxx': case 'vídeoxxx':
+    case 'videoxxx777': case 'vídeoxxx':
       const url4 = await videosxxxc[Math.floor(Math.random() * videosxxxc.length)];
       await conn.sendMessage(m.chat, {video: {url: url4}, caption: `*ᴅɪsғʀᴜᴛᴀ ᴅᴇʟ ᴠɪᴅᴇᴏ 🥵*`}, {quoted: m});
       break;
-    case 'videoxxxlesbi': case 'videolesbixxx': case 'pornolesbivid': case 'pornolesbianavid': case 'pornolesbiv': case 'pornolesbianav': case 'pornolesv':
+    case 'videoxxxlesbi777': case 'videolesbixxx': case 'pornolesbivid': case 'pornolesbianavid': case 'pornolesbiv': case 'pornolesbianav': case 'pornolesv':
       const url5 = await videosxxxc2[Math.floor(Math.random() * videosxxxc2.length)];
       await conn.sendMessage(m.chat, {video: {url: url5}, caption: `*ᴅɪsғʀᴜᴛᴀ ᴅᴇʟ ᴠɪᴅᴇᴏ 🥵*`}, {quoted: m});
       break;
   }
 };
-handler.command = /^(pack|pack2|pack3|videoxxx|vídeoxxx|videoxxxlesbi|videolesbixxx|pornolesbivid|pornolesbianavid|pornolesbiv|pornolesbianav|pornolesv)$/i;
+handler.command = /^(pack777|pack2777|pack3777|videoxxx777|vídeoxxx777|videoxxxlesbi777|videolesbixxx777|pornolesbivid777|pornolesbianavid777|pornolesbiv777|pornolesbianav777|pornolesv777)$/i;
 export default handler;
 
 global.pack = [
