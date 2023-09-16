@@ -1,6 +1,7 @@
 import moment from 'moment-timezone';
 
 const handler = async (m, {conn}) => {
+  const fechagua = moment().tz('America/Guatemala').format('DD/MM HH:mm');
   const fechaper = moment().tz('America/Lima').format('DD/MM HH:mm');
   const fechamex = moment().tz('America/Mexico_City').format('DD/MM HH:mm');
   const fechabol = moment().tz('America/La_Paz').format('DD/MM HH:mm');
@@ -10,7 +11,6 @@ const handler = async (m, {conn}) => {
   const fechaecu = moment().tz('America/Guayaquil').format('DD/MM HH:mm');
   const fechacosr = moment().tz('America/Costa_Rica').format('DD/MM HH:mm');
   const fechacub = moment().tz('America/Havana').format('DD/MM HH:mm');
-  const fechagua = moment().tz('America/Guatemala').format('DD/MM HH:mm');
   const fechahon = moment().tz('America/Tegucigalpa').format('DD/MM HH:mm');
   const fechanic = moment().tz('America/Managua').format('DD/MM HH:mm');
   const fechapan = moment().tz('America/Panama').format('DD/MM HH:mm');
@@ -23,6 +23,7 @@ const handler = async (m, {conn}) => {
   const fechaafri = moment().tz('Africa/Malabo').format('DD/MM HH:mm');
   await conn.sendMessage(m.chat, {text: `\`\`\`
 「 ZONA-HORARIA ⏰ 」
+⏱️Guatemala  : ${fechagua}
 ⏱️Peru       : ${fechaper}
 ⏱️Mexico     : ${fechamex}
 ⏱️Bolivia    : ${fechabol}
@@ -32,7 +33,6 @@ const handler = async (m, {conn}) => {
 ⏱️Ecuador    : ${fechaecu}
 ⏱️Costa_Rica : ${fechacosr}
 ⏱️Cuba       : ${fechacub}
-⏱️Guatemala  : ${fechagua}
 ⏱️Honduras   : ${fechahon}
 ⏱️Nicaragua  : ${fechanic}
 ⏱️Panama     : ${fechapan}
