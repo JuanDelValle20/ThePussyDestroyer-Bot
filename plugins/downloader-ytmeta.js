@@ -19,11 +19,11 @@ const extract = (await ytdl.getBasicInfo(text)).videoDetails.title;
     genre: s.meta.category || "-",
     comment: {
       language: "spa",
-      text: '🤴🏻 Descarga por BrunoSobrino & TheMystic-Bot-MD 🤖',
+      text: '🤴🏻 Descarga por ThePussyDestroyer-Bot',
     },
     unsynchronisedLyrics: {
       language: "spa",
-      text: '🤴🏻 Descarga por BrunoSobrino & TheMystic-Bot-MD 🤖',
+      text: '🤴🏻 Descarga por ThePussyDestroyer-Bot',
     },
     image: {
       mime: "image/jpeg",
