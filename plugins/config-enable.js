@@ -12,6 +12,12 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
 
 --------------------------------
 
+*Opción:* 🥵 | MODO HORNY
+*Comando:* ${usedPrefix + command} modohorny
+*Descripción:* Activa o desactiva los comandos +18 en el grupo.
+
+--------------------------------
+
 *Opción:* 🔗 | ANTILINK
 *Comando:* ${usedPrefix + command} antilink
 *Descripción:* Activa o desactiva el anti-enlaces de WhatsApp.
@@ -105,6 +111,34 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
 
 --------------------------------
 
+*Opción:* 🕸️ | ANTITRABAS
+*Comando:* ${usedPrefix + command} antitraba
+*Descripción:* El Bot detecta textos largos que podrian ser virus y causar lag en el chat y elimina al usuario.
+*Nota:* Se necesita tener activo el restrict.
+
+--------------------------------
+
+*Opción:* 👎 | ANTIARABES
+*Comando:* ${usedPrefix + command} antiarabes
+*Descripción:* Si un numero árabe se uné al grupo, el Bot lo elimina automaticamente.
+*Nota:* Se necesita tener activo el welcome y el restrict.
+
+--------------------------------
+
+*Opción:* 👎 | ANTIARABES 2
+*Comando:* ${usedPrefix + command} antiarabes2
+*Descripción:* Si un numero árabe escribe en el grupo, el Bot lo elimina automaticamente.
+*Nota:* Se necesita tener activo el restrict.
+
+--------------------------------
+
+*Opción:* 🤖 | MODEJADIBOT
+*Comando:* ${usedPrefix + command} modejadibot
+*Descripción:* Activa o desactiva el uso del comando para sub bots (${usedPrefix}serbot / ${usedPrefix}jadibot). 
+*Nota:* Este comando solo podrá ser usado por owners del Bot.
+
+--------------------------------
+
 *Opción:* 👑 | MODOADMIN
 *Comando:* ${usedPrefix + command} modoadmin
 *Descripción:* El Bot solo responderá a los admins del grupo.
@@ -133,6 +167,13 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
 *Opción:* 🔊 | AUDIOS_BOT
 *Comando:* ${usedPrefix + command} audios_bot
 *Descripción:* Se desactivan los audios del Bot del menuaudios para todos los chats privados.
+*Nota:* Este comando solo podrá ser usado por owners del Bot.
+
+--------------------------------
+
+*Opción:* 🤖 | MODOIA
+*Comando:* ${usedPrefix + command} modoia
+*Descripción:* Se activa el modo "Inteligencia Artificial" con GPT en todos los chats privados.
 *Nota:* Este comando solo podrá ser usado por owners del Bot.`.trim();
 
   const isEnable = /true|enable|(turn)?on|1/i.test(command);
@@ -180,7 +221,7 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       break;
     case 'simsimi':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!(isAdmin || isROwner || isOwner)) {
           global.dfail('admin', m, conn);
           throw false;
         }
@@ -251,7 +292,7 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       break;
     case 'modohorny':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!(isAdmin || isROwner || isOwner)) {
           global.dfail('admin', m, conn);
           throw false;
         }
@@ -260,7 +301,7 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       break;
     case 'modoadmin':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!(isAdmin || isROwner || isOwner)) {
           global.dfail('admin', m, conn);
           throw false;
         }
@@ -269,7 +310,7 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       break;
     case 'autosticker':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!(isAdmin || isROwner || isOwner)) {
           global.dfail('admin', m, conn);
           throw false;
         }
@@ -278,7 +319,7 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       break;
     case 'audios':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!(isAdmin || isROwner || isOwner)) {
           global.dfail('admin', m, conn);
           throw false;
         }
@@ -287,7 +328,7 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       break;
     case 'restrict':
       isAll = true;
-      if (!isOwner) {
+      if (!(isROwner || isOwner)) {
         global.dfail('owner', m, conn);
         throw false;
       }
@@ -295,12 +336,20 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       break;
     case 'audios_bot':
       isAll = true;
-      if (!isOwner) {
+      if (!(isROwner || isOwner)) {
         global.dfail('owner', m, conn);
         throw false;
       }
       bot.audios_bot = isEnable;      
       break;
+    case 'modoia':
+      isAll = true;
+      if (!(isROwner || isOwner)) {
+        global.dfail('owner', m, conn);
+        throw false;
+      }
+      bot.modoia = isEnable;      
+      break;      
     case 'nyimak':
       isAll = true;
       if (!isROwner) {
@@ -311,12 +360,12 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       break;
     case 'autoread':
       isAll = true;
-      if (!isROwner) {
+      if (!(isROwner || isOwner)) {
         global.dfail('rowner', m, conn);
         throw false;
       }
       bot.autoread2 = isEnable;
-      global.opts['autoread'] = isEnable;
+      //global.opts['autoread'] = isEnable;
       break;
     case 'pconly':
     case 'privateonly':
@@ -347,16 +396,16 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       break;
     case 'anticall':
       isAll = true;
-      if (!isROwner) {
-        global.dfail('rowner', m, conn);
+      if (!(isROwner || isOwner)) {
+        global.dfail('owner', m, conn);
         throw false;
       }
       bot.antiCall = isEnable;
       break;
     case 'antiprivado':
       isAll = true;
-      if (!isROwner) {
-        global.dfail('rowner', m, conn);
+      if (!(isROwner || isOwner)) {
+        global.dfail('owner', m, conn);
         throw false;
       }
       bot.antiPrivate = isEnable;
@@ -371,15 +420,15 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       break;
     case 'antispam':
       isAll = true;
-      if (!isROwner) {
-        global.dfail('rowner', m, conn);
+      if (!(isROwner || isOwner)) {
+        global.dfail('owner', m, conn);
         throw false;
       }
       bot.antispam = isEnable;
       break;
     case 'antitoxic':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!(isAdmin || isROwner || isOwner)) {
           global.dfail('admin', m, conn);
           throw false;
         }
@@ -388,7 +437,7 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       break;
     case 'antitraba':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!(isAdmin || isROwner || isOwner)) {
           global.dfail('admin', m, conn);
           throw false;
         }
@@ -397,8 +446,8 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       break;
     case 'antiarabes':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
-          global.dfail('admin', m, conn);
+        if (!(isAdmin || isROwner || isOwner)) {
+          global.dfail('admin', m, conn); 
           throw false;
         }
       }
@@ -406,7 +455,7 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       break;
     case 'antiarabes2':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!(isAdmin || isROwner || isOwner)) {
           global.dfail('admin', m, conn);
           throw false;
         }
